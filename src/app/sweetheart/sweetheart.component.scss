@@ -817,163 +817,200 @@
 		 visibility: hidden;
 	}
 }
- .btn, .control {
-	 padding: 0.5em 1em;
-	 font-size: 1.2em;
-}
- .btn {
-	 background: #f20dcc;
-	 border: 1px solid transparent;
-	 color: white;
-	 cursor: pointer;
-	 transition: 0.25s;
-}
- .btn:hover, .btn:focus {
-	 background: #f655db;
-}
- select {
-	 border: none;
-	 outline-color: #f20dcc;
-}
- #controls {
-	 position: absolute;
-	 right: 1px;
-	 top: 1px;
-	 border-bottom-left-radius: 5px;
-	 box-shadow: -1px 2px 13px rgba(51, 0, 43, 0.4);
-}
- #controls button {
-	 width: -moz-available;
-	 width: -webkit-fill-available;
-	 width: fill-available;
-	 border-bottom-left-radius: 5px;
-}
- .hide {
-	 display: none !important;
-}
- .alert {
-	 position: absolute;
-	 bottom: -1.6em;
-	 left: 50%;
-	 transform: translateX(-50%);
-	 padding: 0.4em 1em 2em;
-	 background: #f20dcc;
-	 color: #fff0fc;
-	 animation: 2s 40s peep-in both ease-in-out;
-	 border-radius: 5px;
-	 box-shadow: 0 -1px 6px 1px rgba(242, 13, 204, 0.3);
-}
- .alert.close {
-	 animation: peep-out 0.8s linear both;
-}
- @keyframes peep-in {
-	 0% {
-		 transform: translate(-50%, 100%);
-		 animation-timing-function: linear;
-	}
-	 76% {
-		 transform: translate(-50%, -18%);
-	}
-	 90% {
-		 transform: translate(-50%, -20%);
-	}
-	 98% {
-		 transform: translate(-50%, 8%);
-	}
-	 100% {
-		 transform: translate(-50%, 0);
-	}
-}
- @keyframes peep-out {
-	 to {
-		 transform: translate(-50%, 100%);
-		 visibility: hidden;
-	}
-}
- .dismiss {
-	 border: none;
-	 background: #ff70e7;
-	 color: white;
-	 padding: 0.2em 0.5em;
-	 cursor: pointer;
-	 margin-left: 0.2em;
-}
- .tip {
-	 position: absolute;
-	 color: #f20dcc;
-	 animation: show-tip 0.5s 15s ease-in both;
-	 font-size: 1.3rem;
-	 font-family: "Gloria Hallelujah", cursive;
-}
- @keyframes show-tip {
-	 from {
-		 visibility: hidden;
-		 opacity: 0;
-	}
-}
- .tip .text {
-	 text-shadow: -1px 2px 4px rgba(51, 0, 43, .2);
-}
- .tip strong {
-	 font-weight: normal;
-}
- .tip svg {
-	 width: 110px;
-	 height: auto;
-	 -webkit-filter: drop-shadow(-1px 3px 5px rgba(51, 0, 43, .3));
-	 filter: drop-shadow(-1px 3px 5px rgba(51, 0, 43, .3));
-	 animation: show-tip 0.5s 15.1s ease-in both;
-}
- .tip svg path {
-	 fill: #f20dcc;
-}
- @keyframes show-tip-arrow {
-	 0% {
-		 visibility: hidden;
-		 opacity: 0;
-		 transform: scale(0);
-	}
-	 85% {
-		 visibility: visible;
-		 opacity: 1;
-		 transform: scale(1.2);
-	}
-	 100% {
-		 visibility: visible;
-		 opacity: 1;
-		 transform: none;
-	}
-}
- .tip-effect {
-	 left: -120px;
-	 top: 0.5em;
-	 animation-delay: 20s;
-}
- .tip-effect .text {
-	 width: 110px;
-	 display: flex;
-	 justify-content: center;
-	 white-space: nowrap;
-	 margin-left: -40px;
-}
- .tip-effect svg {
-	 animation-delay: 20.1s;
-}
- .tip-type {
-	 display: flex;
-	 left: 50%;
-	 top: calc(50% - 6rem);
-	 transform: translateX(-50%);
-	 animation-delay: 12s;
-}
- .tip-type svg {
-	 animation-delay: 12.1s;
-	 width: 40px;
-	 height: 40px;
-	 margin-top: 0.8em;
-	 margin-left: 20px;
-	 transform: rotate(-9deg);
-	 -webkit-filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
-	 filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
-}
+
  
+
+
+/*
+Outra animação
+*/
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+  
+  .letter-animate {
+      
+  }
+  
+  .letter-item {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+
+  .frame {
+        animation: blurFadeInOut .6s ease-out;
+    transform: scale(0);
+    position: absolute;
+  }
+  
+  .frame1 {
+      animation-delay: 0s;
+  }
+  
+  .frame2 {
+    animation-delay: .6s;
+  }
+
+  .frame3 {
+    animation-delay: 1.2s;
+  }
+
+  .frame4 {
+    animation-delay: 1.8s;
+  }
+
+  .frame5 {
+    animation-delay: 2.4s;
+  }
+
+  .frame6 {
+    animation-delay: 3s;
+  }
+
+  .frame7 {
+    animation-delay: 3.6s;
+  }
+
+  .frame8 {
+    animation-delay: 4.2s;
+  }
+
+  .frame9 {
+    animation-delay: 4.8s;
+  }
+
+  .frame10 {
+    animation-delay: 5.4s;
+  }
+
+  .frame11 {
+    animation-delay: 6s;
+  }
+
+  .frame12 {
+    animation-delay: 6.6s;
+  }
+
+  .frame13 {
+    animation-delay: 7.2s;
+  }
+
+  .frame14 {
+    animation-delay: 7.8s;
+  }
+
+  .frame15 {
+    animation-delay: 8.4s;
+  }
+
+  .frame16 {
+    animation-delay: 9s;
+  }
+
+  .frame17 {
+    animation-delay: 9.6s;
+  }
+
+  .frame18 {
+    animation-delay: 10.2s;
+  }
+
+  .frame19 {
+    animation-delay: 10.8s;
+  }
+
+  .frame20 {
+    animation-delay: 11.4s;
+  }
+
+  .frame21 {
+    animation-delay: 12s;
+  }
+
+  .frame22 {
+    animation-delay: 12.6s;
+  }
+
+  .frame23 {
+    animation-delay: 13.2s;
+  }
+
+  .frame24 {
+    animation-delay: 13.8s;
+  }
+
+  .frame25 {
+    animation-delay: 14.4s;
+  }
+
+
+  @keyframes blurFadeInOut {
+      0% {
+          opacity: 0;
+          text-shadow: 0px 0px 40px #fff;
+          transform: scale(3);
+      }
+      20%, 75% {
+          opacity: 1;
+          text-shadow: 0px 0px 1px #fff;
+          transform: scale(4);
+      }
+      100% {
+          opacity: 0;
+          text-shadow: 0px 0px 50px #fff;
+          transform: scale(6);
+      }
+  }
+  @keyframes blurFadeIn {
+      0% {
+          opacity: 0;
+          text-shadow: 0px 0px 40px #fff;
+          transform: scale(1.3);
+      }
+      50% {
+          opacity: 0.5;
+          text-shadow: 0px 0px 10px #fff;
+          transform: scale(1.1);
+      }
+      100% {
+          opacity: 1;
+          text-shadow: 0px 0px 1px #fff;
+          transform: scale(1);
+      }
+  }
+  @keyframes fadeInBack {
+      0% {
+          opacity: 0;
+          transform: scale(0);
+      }
+      50% {
+          opacity: 0.8;
+          transform: scale(2);
+      }
+
+      70% {
+        opacity: 0.8;
+        transform: scale(3);
+    }
+
+      100% {
+          opacity: 0.2;
+          transform: scale(5);
+      }
+  }
+  
+  @keyframes fadeInRotate {
+      0% {
+          opacity: 0;
+          transform: scale(0) rotate(360deg);
+      }
+      100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+      }
+  }
