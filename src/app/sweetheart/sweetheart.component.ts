@@ -1,19 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-sweetheart',
   templateUrl: './sweetheart.component.html',
   styleUrls: ['./sweetheart.component.scss']
 })
-export class SweetheartComponent implements OnInit {
+export class SweetheartComponent implements OnInit, AfterViewInit, AfterContentInit {
 
   showLettersAnimated: boolean = false;
   counter: number = 0;
-
+  @ViewChild('music')
+  musicEl!: ElementRef;
+  
   constructor() { }
 
   ngOnInit(): void {
     this.isShowContainer();
+  }
+
+  triggerOnEnded(event: any) {
+    console.log('ended');
+  }
+
+  ngAfterViewInit(): void {
+    this.musicEl.nativeElement.click()
+    this.playMusic();
+  }
+
+  ngAfterContentInit(): void {
+  //  this.playMusic();
   }
 
   isShowContainer() {
@@ -25,5 +40,23 @@ export class SweetheartComponent implements OnInit {
       }
     }, 1000);
 
+  }
+
+  playMusic() {
+    setTimeout(() => {
+      this.musicEl.nativeElement.click()
+    }, 500);
+
+    setTimeout(() => {
+      let a = new Audio('../../assets/music/do-i-wanna-know.ogg');
+      a.load();
+      a.play();
+    }, 2000)
+  }
+
+
+  @HostListener("window:load", [])
+  onWindowScroll() {
+    this.playMusic();
   }
 }

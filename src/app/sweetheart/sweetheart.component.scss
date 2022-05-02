@@ -1014,3 +1014,9 @@ Outra animação
           transform: scale(1) rotate(0deg);
       }
   }
+
+  @media(max-width: 550px) {
+    .anim-text {
+        font: 2.2em "Baloo Chettan", Helvetica Neueu, HelveticaNeueu, Helvetica, Arial;
+    }
+  }
