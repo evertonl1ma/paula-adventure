@@ -8,6 +8,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
 
+  showGame: boolean = false;
+
   url: string = "https://paula-adventure-game.vercel.app";
   urlSafe: SafeResourceUrl;
   
@@ -20,4 +22,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  jumpIntro(event: Event) {
+    console.log(event)
+    this.showGame = true;
+  }
 }

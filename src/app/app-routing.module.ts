@@ -6,6 +6,7 @@ import { SweetheartComponent } from './sweetheart/sweetheart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'presentation', component: PresentationComponent},
   { path: 'quer-namorar-comigo', component: SweetheartComponent},
 ];
 

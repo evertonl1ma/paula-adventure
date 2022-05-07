@@ -1,2 +1,5 @@
 
-<iframe width="100%" height="100%" frameBorder="0" [src]="urlSafe"></iframe>
+
+<app-presentation *ngIf="!showGame" (nextStep)="jumpIntro($event)"></app-presentation>
+
+<iframe *ngIf="showGame" width="100%" height="100%" frameBorder="0" [src]="urlSafe"></iframe>
