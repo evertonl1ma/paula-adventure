@@ -46,12 +46,10 @@ export class SweetheartComponent implements OnInit, AfterViewInit, AfterContentI
     setTimeout(() => {
       this.musicEl.nativeElement.click()
     }, 500);
-
-    setTimeout(() => {
       let a = new Audio('../../assets/music/do-i-wanna-know.ogg');
       a.load();
       a.play();
-    }, 2000)
+
   }
 
 
