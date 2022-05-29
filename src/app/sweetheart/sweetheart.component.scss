@@ -833,17 +833,13 @@ Outra animação
     position: relative;
   }
   
-  .letter-animate {
-      
-  }
-  
   .letter-item {
     font-size: 6rem;
     font-weight: bold;
   }
 
   .frame {
-        animation: blurFadeInOut .6s ease-out;
+    animation: blurFadeInOut .6s ease-out;
     transform: scale(0);
     position: absolute;
   }
@@ -966,6 +962,7 @@ Outra animação
           transform: scale(6);
       }
   }
+
   @keyframes blurFadeIn {
       0% {
           opacity: 0;
@@ -983,6 +980,7 @@ Outra animação
           transform: scale(1);
       }
   }
+
   @keyframes fadeInBack {
       0% {
           opacity: 0;
@@ -1015,8 +1013,47 @@ Outra animação
       }
   }
 
+  .tip-effect {
+	left: -120px;
+	top: 0.5em;
+}
+
+.tip-effect .text {
+	width: 110px;
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+	margin-left: -40px;
+}
+
+.tip-effect svg {
+	
+}
+
+.tip-type {
+	
+}
+
+.tip-type svg {
+	width: 40px;
+	height: 40px;
+	margin-top: 0.8em;
+	margin-left: 20px;
+	transform: rotate(-9deg);
+	-webkit-filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
+	filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
+	top: -40px;
+    position: absolute;
+	cursor: pointer;
+}
+
+
   @media(max-width: 550px) {
     .anim-text {
         font: 2.2em "Baloo Chettan", Helvetica Neueu, HelveticaNeueu, Helvetica, Arial;
     }
+
+	.letter-item {
+		font-size: 4em;
+	}
   }

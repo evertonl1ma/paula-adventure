@@ -1,4 +1,5 @@
 import { AfterContentInit, AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sweetheart',
@@ -12,7 +13,12 @@ export class SweetheartComponent implements OnInit, AfterViewInit, AfterContentI
   @ViewChild('music')
   musicEl!: ElementRef;
   
-  constructor() { }
+  music: any = new Audio('../../assets/music/do-i-wanna-know.ogg');
+
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.isShowContainer();
@@ -44,17 +50,22 @@ export class SweetheartComponent implements OnInit, AfterViewInit, AfterContentI
 
   playMusic() {
     setTimeout(() => {
-      this.musicEl.nativeElement.click()
+    //  this.musicEl.nativeElement.click()
     }, 500);
-      let a = new Audio('../../assets/music/do-i-wanna-know.ogg');
-      a.load();
-      a.play();
+      
+      this.music.load();
+      this.music.play();
 
   }
 
-
+/*
   @HostListener("window:load", [])
   onWindowScroll() {
     this.playMusic();
+  }*/
+
+  goToDeclaration() {
+    this.music.pause();
+    this.router.navigate(['../declaration'], { relativeTo: this.activatedRoute})
   }
 }
