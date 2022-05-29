@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   setTimer() {
     const count = setInterval(() => {
       this.timer++
-      if(this.timer >= 30) {
+      if(this.timer >= 40) {
         clearInterval(count)
         this.showGame = true;
       }
@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit {
 
   
   jumpIntro(event: Event) {
-    console.log(event)
     this.showGame = true;
   }
 }
